@@ -16,7 +16,9 @@ app.engine('hbs', exphbs({ extname: 'hbs', defaultLayout: 'mainLayout', layoutsD
 app.set('view engine','hbs')
 
 
-
+app.use('/', (req, res)=>{
+    res.render('mainLayout')
+});
 app.listen(port,()=>{
 console.log("server running successfully")
 })
