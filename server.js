@@ -15,11 +15,9 @@ app.set('views', path.join(__dirname, '/views/'))
 app.engine('hbs', exphbs({ extname: 'hbs', defaultLayout: 'mainLayout', layoutsDir: __dirname + '/views/layouts/' }))
 app.set('view engine','hbs')
 
-app.get("/",(req,res)=>
-{
-    res.send('mainLayout')
-})
-app.use('/employee',employeecontroller)
+
+
 app.listen(port,()=>{
 console.log("server running successfully")
 })
+app.use('/employee',employeecontroller)
