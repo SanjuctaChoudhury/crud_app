@@ -11,7 +11,7 @@ router.get("/",(req,res)=>
 router.post("/",(req,res)=>
 {
     if (req.body._id == '')
-    insertRecord(req, res);
+    insertrecord(req, res);
     else
     updateRecord(req, res);
 })

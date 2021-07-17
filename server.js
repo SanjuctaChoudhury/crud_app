@@ -16,10 +16,13 @@ app.engine('hbs', exphbs({ extname: 'hbs', defaultLayout: 'mainLayout', layoutsD
 app.set('view engine','hbs')
 
 
-app.use('/', (req, res)=>{
-    res.render('mainLayout')
-});
+app.get('/', (req, res)=>{
+    res.render("employee/addoredit",{
+        viewTitle:"Insert Employee"
+    })
+})
+app.use('/employee',employeecontroller)
 app.listen(port,()=>{
 console.log("server running successfully")
 })
-app.use('/employee',employeecontroller)
+
